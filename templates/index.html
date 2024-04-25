@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+</head>
+<body>
+    <h1>Hospital Management System</h1>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="/display_all_tables">Display All Tables</a> |
+        <a href="/display_patients">Display Patients</a> |
+        <a href="/display_doctors">Display Doctors</a> |
+        <a href="/display_registers">Display Registers</a> |
+        <a href="/display_departments">Display Departments</a> |
+        <a href="/display_medical_records">Display Medical Records</a>
+    </nav>
+
+    <!-- Search PatientForm -->
+    <h2>Search for Patient</h2>
+    <form action="/search_patient" method="get">
+        Patient ID or Name: <input type="text" name="search_query" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Search Doctor Form -->
+    <h2>Search Doctor</h2>
+    <form action="/search_doctor" method="post">
+        Doctor ID or Name: <input type="text" name="doctor_search" required><br>
+        <button type="submit">Search Doctor</button>
+    </form>
+
+
+
+    <!-- Add New Patient Form -->
+    <h2>Add New Patient</h2>
+    <form action="/add_patient" method="post">
+        Patient ID: <input type="text" name="patient_id" required><br>
+        First Name: <input type="text" name="first_name" required><br>
+        Last Name: <input type="text" name="last_name" required><br>
+        Date of Birth: <input type="date" name="dob" required><br>
+        Address: <input type="text" name="address" required><br>
+        Gender: <select name="gender">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select><br>
+        Phone Number: <input type="text" name="phone" required><br>
+        <button type="submit">Add Patient</button>
+    </form>
+
+    <!-- Update Patient Form -->
+    <h2>Update Patient Phone Number</h2>
+    <form action="/update_patient" method="post">
+        Patient ID: <input type="text" name="patient_id" required><br>
+        New Phone Number: <input type="text" name="phone" required><br>
+        <button type="submit">Update Phone</button>
+    </form>
+
+<!-- Add New Doctor Form -->
+<h2>Add New Doctor</h2>
+<form action="/add_doctor" method="post">
+    Doctor ID: <input type="text" name="doctor_id" required><br>
+    Name: <input type="text" name="doctor_name" required><br>
+    Specialization: <input type="text" name="doctor_specialization" required><br>
+    Department ID: <input type="text" name="department_id" required><br>  <!-- New input for department ID -->
+    <button type="submit">Add Doctor</button>
+</form>
+
+
+<!-- Update Doctor Form -->
+<h2>Update Doctor Information</h2>
+<form action="/update_doctor" method="post">
+    Doctor ID: <input type="text" name="doctor_id" required><br>
+    New Specialization: <input type="text" name="doctor_specialization" required><br>
+    New Department ID: <input type="text" name="department_id" required><br>  <!-- Optional: New input for department ID if you want to allow updates -->
+    <button type="submit">Update Doctor</button>
+</form>
+
+
+    <!-- Add New Register Entry Form -->
+    <h2>Add New Register Entry</h2>
+    <form action="/add_register" method="post">
+        Register ID: <input type="text" name="register_id" required><br>
+        Arrival Time: <input type="text" name="arrival_time" required><br>
+        Patient ID: <input type="text" name="patient_id" required><br>
+        Medical Complaint: <input type="text" name="medical_complaint" required><br>
+        Assessment: <input type="text" name="assessment" required><br>
+        Treatment: <input type="text" name="treatment" required><br>
+        Follow Up: <input type="text" name="follow_up"><br>
+        <button type="submit">Add Register Entry</button>
+    </form>
+
+    <!-- Update Register Entry Form -->
+    <h2>Update Register Entry</h2>
+    <form action="/update_register" method="post">
+        Register ID: <input type="text" name="register_id" required><br>
+        New Treatment: <input type="text" name="treatment" required><br>
+        New Follow Up: <input type="text" name="follow_up" required><br>
+        <button type="submit">Update Register Entry</button>
+    </form>
+
+    <!-- Add Medical Record Form -->
+    <h2>Add Medical Record</h2>
+    <form action="/add_medical_record" method="post">
+        Record ID: <input type="text" name="record_id" required><br>
+        Register ID: <input type="text" name="register_id" required><br>
+        Diagnosis: <input type="text" name="diagnosis" required><br>
+        Medication: <input type="text" name="medication"><br>
+        <button type="submit">Add Medical Record</button>
+    </form>
+
+    <!-- Update Medical Record Form -->
+    <h2>Update Medical Record</h2>
+    <form action="/update_medical_record" method="post">
+        Record ID: <input type="text" name="record_id" required><br>
+        New Diagnosis: <input type="text" name="diagnosis" required><br>
+        New Medication: <input type="text" name="medication" required><br>
+        <button type="submit">Update Medical Record</button>
+    </form>
+
+</body>
+</html>

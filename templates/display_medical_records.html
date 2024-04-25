@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Medical Records</title>
+</head>
+<body>
+    <h1>Medical Records</h1>
+    <table border="1">
+        <tr>
+            <th>Record ID</th>
+            <th>Register ID</th>
+            <th>Diagnosis</th>
+            <th>Medication</th>
+        </tr>
+        {% for record in medical_records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

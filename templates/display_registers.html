@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Registers</title>
+</head>
+<body>
+    <h1>Register Entries</h1>
+    <table border="1">
+        <tr>
+            <th>Register ID</th>
+            <th>Arrival Time</th>
+            <th>Patient ID</th>
+            <th>Medical Complaint</th>
+            <th>Assessment</th>
+            <th>Treatment</th>
+            <th>Follow Up</th>
+        </tr>
+        {% for register in registers %}
+        <tr>
+            <td>{{ register[0] }}</td>
+            <td>{{ register[1] }}</td>
+            <td>{{ register[2] }}</td>
+            <td>{{ register[3] }}</td>
+            <td>{{ register[4] }}</td>
+            <td>{{ register[5] }}</td>
+            <td>{{ register[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

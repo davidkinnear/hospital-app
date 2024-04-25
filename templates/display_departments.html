@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Departments</title>
+</head>
+<body>
+    <h1>Departments</h1>
+    <table border="1">
+        <tr>
+            <th>Department ID</th>
+            <th>Name</th>
+            <th>Location</th>
+        </tr>
+        {% for department in departments %}
+        <tr>
+            <td>{{ department[0] }}</td>
+            <td>{{ department[1] }}</td>
+            <td>{{ department[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

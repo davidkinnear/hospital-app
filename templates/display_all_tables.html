@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display All Tables</title>
+</head>
+<body>
+    <h1>All Tables</h1>
+    <section>
+        <h2>Patients</h2>
+        <table border="1">
+            <tr>
+                <th>Patient ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Phone</th>
+            </tr>
+            {% for patient in patients %}
+            <tr>
+                <td>{{ patient[0] }}</td>
+                <td>{{ patient[1] }}</td>
+                <td>{{ patient[2] }}</td>
+                <td>{{ patient[3] }}</td>
+                <td>{{ patient[4] }}</td>
+                <td>{{ patient[5] }}</td>
+                <td>{{ patient[6] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    <section>
+        <h2>Doctors</h2>
+        <table border="1">
+            <tr>
+                <th>Doctor ID</th>
+                <th>Name</th>
+                <th>Specialization</th>
+            </tr>
+            {% for doctor in doctors %}
+            <tr>
+                <td>{{ doctor[0] }}</td>
+                <td>{{ doctor[1] }}</td>
+                <td>{{ doctor[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    <section>
+        <h2>Registers</h2>
+        <table border="1">
+            <tr>
+                <th>Register ID</th>
+                <th>Arrival Time</th>
+                <th>Patient ID</th>
+                <th>Medical Complaint</th>
+                <th>Assessment</th>
+                <th>Treatment</th>
+                <th>Follow Up</th>
+            </tr>
+            {% for register in registers %}
+            <tr>
+                <td>{{ register[0] }}</td>
+                <td>{{ register[1] }}</td>
+                <td>{{ register[2] }}</td>
+                <td>{{ register[3] }}</td>
+                <td>{{ register[4] }}</td>
+                <td>{{ register[5] }}</td>
+                <td>{{ register[6] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    <section>
+        <h2>Departments</h2>
+        <table border="1">
+            <tr>
+                <th>Department ID</th>
+                <th>Name</th>
+                <th>Location</th>
+            </tr>
+            {% for department in departments %}
+            <tr>
+                <td>{{ department[0] }}</td>
+                <td>{{ department[1] }}</td>
+                <td>{{ department[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    <section>
+        <h2>Medical Records</h2>
+        <table border="1">
+            <tr>
+                <th>Record ID</th>
+                <th>Register ID</th>
+                <th>Diagnosis</th>
+                <th>Medication</th>
+            </tr>
+            {% for record in medical_records %}
+            <tr>
+                <td>{{ record[0] }}</td>
+                <td>{{ record[1] }}</td>
+                <td>{{ record[2] }}</td>
+                <td>{{ record[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+</body>
+</html>
